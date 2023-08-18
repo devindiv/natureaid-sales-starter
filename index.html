@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/43600342.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            accent: '#031137'
+          },
+          fontFamily: {
+            'logo': ['Montserrat', 'sans-serif'],
+          },
+          backgroundImage: {
+            'hero': "url('./images/biswaroop01.jpeg')",
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class=" bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 transition-colors duration-300">
+
+  <header class="md:px-24">
+  <div class="mx-auto flex flex-wrap py-5 md:py-7 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <img class="h-8 w-auto" src="./images/logo.svg">
+      <span class="ml-2 text-xl md:text-2xl font-bold tracking-wide text-accent font-logo">Natureaid</span>
+    </a>
+  </div>
+</header>
+
+
+  <section class="text-gray-600 body-font">
+
+  <div class="p-5 md:px-24 md:py-16 mx-auto flex flex-wrap items-center">
+
+    <div class="flex flex-col lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0 text-center md:text-left">
+      <h1 class="title-font text-slate-800 font-bold text-2xl md:text-3xl text-gray-900">We are working with Experts certified from Indo-Vietnam Medical Board</h1>
+      <p class="leading-relaxed text-sm md:text-md text-gray-500 mt-4">Our seasoned naturopathic experts are here to guide you on a path that respects the body's natural rhythms and encourages harmony within. Through personalized consultations and time-tested natural therapies, we address the root causes of ailments, empowering you to achieve lasting wellness.</p>
+       
+      <div x-data="{ showModal: false }">
+  <div class="inline-flex items-center mt-6 md:mt-16">
+    <img alt="profile pic" src="./images/biswaroop01.jpeg" class="w-16 h-16 md:w-20 md:h-20 shadow-xl rounded-full flex-shrink-0 object-cover object-center cursor-pointer" x-on:click="showModal = true">
+    <span class="flex-grow flex text-left flex-col pl-4">
+      <span class="title-font font-medium text-gray-900">S.K. Baidya</span>
+      <span class="text-gray-500 text-xs tracking-widest mt-0.5 md:w-1/2">N.I.C.E & W.I.S.E Expert, I.L.I Paramedic, Diabetes Educator, 15+ years of experience in the field of Ayurveda.</span>
+    </span>
+  </div>
+
+  <div x-show="showModal" class="fixed inset-0 z-50 flex items-center justify-center">
+    <div class="modal-overlay absolute w-full h-full bg-gray-900 opacity-50" x-on:click="showModal = false"></div>
+    <div class="modal-container bg-white w-5/6 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+      <div class="modal-content py-4 text-left px-6">
+        <img src="./images/biswaroop01.jpeg" alt="profile pic" class="w-full">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    </div>
+
+    <div class="lg:w-2/6 md:w-1/2 bg-gray-100 rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0">
+      <h2 class="text-gray-900 text-lg font-medium title-font mb-5">Book your 60-min Free Consultancy video call</h2>
+      <form method="POST">
+        <div class="relative mb-4">
+        <label for="full-name" class="leading-7 text-sm text-gray-600">Full Name</label>
+        <input type="text" id="full-name" name="full-name" class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+      </div>
+      <div class="relative mb-4">
+        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+        <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+      </div>
+      <div class="relative mb-4">
+        <label for="phone" class="leading-7 text-sm text-gray-600">Whatsapp Number</label>
+        <input type="tel" id="phone" name="phone" class="w-full bg-white rounded border border-gray-300 focus:border-green-500 focus:ring-2 focus:ring-green-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+      </div>
+      <button type="submit" class="text-white w-full bg-green-500 border-0 py-2 px-8 focus:outline-none hover:bg-green-600 rounded text-lg">Submit</button>
+      </form>
+      <p class="text-xs text-gray-500 mt-3">By clicking submit you are signing up to our newsletter.</p>
+    </div>
+  </div>
+</section>
+
+
+</body>
+</html>
